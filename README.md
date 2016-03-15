@@ -1,6 +1,6 @@
 [![LSM330](LSM330_I2CS.png)](https://www.controleverything.com/content/Accelorometer?sku=LSM330_I2CS)
 # LSM330
-LSM330 3D Accelerometer, 3D Gyroscope
+LSM330 3D Accelerometer 3D Gyroscope
 
 The LSM330 device, provides digital acceleration and angular acceleration for X, Y and Z axis
 
