@@ -1,6 +1,6 @@
 [![LSM330](LSM330_I2CS.png)](https://www.controleverything.com/content/Accelorometer?sku=LSM330_I2CS)
 # LSM330
-LSM330 3D Accelerometer 3D Gyroscope
+LSM330 3D Accelerometer, 3D Gyroscope
 
 The LSM330 device, provides digital acceleration and angular acceleration for X, Y and Z axis
 
@@ -8,7 +8,7 @@ This Device is available from ControlEverything.com [SKU: LSM330_I2CS]
 
 https://www.controleverything.com/content/Accelorometer?sku=LSM330_I2CS
 
-This Sample code can be used with Raspberry pi and Arduino.
+This Sample code can be used with Raspberry pi, Arduino and Particle.
 
 ## Java
 Download and install pi4j library on Raspberry pi. Steps to install pi4j are provided at:
@@ -46,5 +46,20 @@ https://www.arduino.cc/en/Main/Software
 Download (or git pull) the code and double click the file to run the program.
 
 Compile and upload the code on Arduino IDE and see the output on Serial Monitor.
+
+
+## Particle Photon
+
+Login to your Photon and setup your device according to steps provided at:
+
+https://docs.particle.io/guide/getting-started/connect/photon/
+
+Download (or git pull) the code. Go to online IDE and copy the code.
+
+https://build.particle.io/build/
+
+Verify and flash the code on your Photon. Code output is shown in logs at dashboard:
+
+https://dashboard.particle.io/user/logs
 
 #####The code output is the raw values of acceleration and angular acceleration in X, Y and Z axis.
