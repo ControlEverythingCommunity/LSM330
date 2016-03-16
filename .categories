@@ -1,4 +1,5 @@
 lang:java
 lang:python
 lang:arduino
+lang:particle
 sku:LSM330_I2CS
