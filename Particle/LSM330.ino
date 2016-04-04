@@ -51,7 +51,7 @@ void setup()
 
 void loop()
 {
-    unsigned data[6];
+    unsigned int data[6];
     
     for(int i = 0; i < 6; i++)
     {
