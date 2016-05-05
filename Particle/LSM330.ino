@@ -9,7 +9,7 @@
 
 // LSM330 Gyro I2C address is 0x6A(106)
 #define Addr_Gyro 0x6A
-// LSM330 Accl I2C address is 0x6A(106)
+// LSM330 Accl I2C address is 0x1D(29)
 #define Addr_Accl 0x1D
 
 int xGyro = 0, yGyro = 0, zGyro = 0, xAccl = 0, yAccl =  0, zAccl = 0;
