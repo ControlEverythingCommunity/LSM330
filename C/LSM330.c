@@ -43,30 +43,30 @@ void main()
 		write(file, reg, 1);
 		if(read(file, input, 1) != 1)
 		{
-			printf("Erorr : Input/output Erorr \n");
+			printf("Error : Input/Output error \n");
 			exit(1);
 		}
 		data[i] = input[0];
 	}
 	
 	// Convert the data
-    int xGyro = (data[1] * 256 + data[0]);
-    if(xGyro > 32767)
-    {
-        xGyro -= 65536;
-    }
+    	int xGyro = (data[1] * 256 + data[0]);
+    	if(xGyro > 32767)
+    	{
+        	xGyro -= 65536;
+    	}
     
-    int yGyro = (data[3] * 256 + data[2]);
-    if(yGyro > 32767)
-    {
-        yGyro -= 65536;
-    }
+    	int yGyro = (data[3] * 256 + data[2]);
+    	if(yGyro > 32767)
+    	{
+        	yGyro -= 65536;
+    	}
     
-    int zGyro = (data[5] * 256 + data[4]);
-    if(zGyro > 32767)
-    {
-        zGyro -= 65536;
-    }
+	int zGyro = (data[5] * 256 + data[4]);
+    	if(zGyro > 32767)
+    	{
+        	zGyro -= 65536;
+    	}
 	
 	// Get I2C device, LSM330 ACCELERO I2C address is 0x1D(29)
 	ioctl(file, I2C_SLAVE, 0x1D);
@@ -86,36 +86,36 @@ void main()
 		write(file, reg, 1);
 		if(read(file, input, 1) != 1)
 		{
-			printf("Erorr : Input/output Erorr \n");
+			printf("Error : Input/Output error \n");
 			exit(1);
 		}
 		data[i] = input[0];
 	}
 	
 	// Convert the data
-    int xAccl = (data[1] * 256 + data[0]);
-    if(xAccl > 32767)
-    {
-        xAccl -= 65536;
-    }
+    	int xAccl = (data[1] * 256 + data[0]);
+    	if(xAccl > 32767)
+    	{
+		xAccl -= 65536;
+    	}
     
-    int yAccl = (data[3] * 256 + data[2]);
-    if(yAccl > 32767)
-    {
-        yAccl -= 65536;
-    }
+    	int yAccl = (data[3] * 256 + data[2]);
+    	if(yAccl > 32767)
+    	{
+        	yAccl -= 65536;
+    	}
     
-    int zAccl = (data[5] * 256 + data[4]);
-    if(zAccl > 32767)
-    {
-        zAccl -= 65536;
-    }
+    	int zAccl = (data[5] * 256 + data[4]);
+    	if(zAccl > 32767)
+    	{
+        	zAccl -= 65536;
+    	}
 	
-	// Output data to screen
-    printf("Rotation in X-axis : %d \n", xGyro);
-    printf("Rotation in Y-axis : %d \n", yGyro);
-    printf("Rotation in Z-axis : %d \n", zGyro);
-    printf("Acceleration in X-axis : %d \n", xAccl);
-    printf("Acceleration in Y-axis : %d \n", yAccl);
-    printf("Acceleration in Z-axis : %d \n", zAccl);
-}	
+    	// Output data to screen
+    	printf("Rotation in X-axis : %d \n", xGyro);
+    	printf("Rotation in Y-axis : %d \n", yGyro);
+    	printf("Rotation in Z-axis : %d \n", zGyro);
+    	printf("Acceleration in X-axis : %d \n", xAccl);
+    	printf("Acceleration in Y-axis : %d \n", yAccl);
+    	printf("Acceleration in Z-axis : %d \n", zAccl);
+}
