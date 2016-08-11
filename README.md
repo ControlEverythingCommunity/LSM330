@@ -78,4 +78,23 @@ Run the c program.
 ```cpp
 $>./LSM330
 ```
+## Onion Omega
+
+Get Started and setting up the Onion Omega according to steps provided at :
+
+https://wiki.onion.io/Get-Started
+
+To install the Python module, run the following commands:
+```cpp
+opkg update
+```
+```cpp
+opkg install python-light pyOnionI2C
+```
+
+Download (or git pull) the code in Onion Omega. Run the program.
+
+```cpp
+$> python LSM330.py
+```
 #####The code output is the raw values of acceleration and angular acceleration in X, Y and Z axis.
