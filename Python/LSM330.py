@@ -51,41 +51,41 @@ zGyro = data1 * 256 + data0
 if zGyro > 32767 :
 	zGyro -= 65536
 
-# LSM330 Accl address, 0x1D(29)
+# LSM330 Accl address, 0x1E(30)
 # Select control register1, 0x20(32)
 #		0x67(103)	Power ON, Data rate selection = 100 Hz
 #					X, Y, Z-Axis enabled
-bus.write_byte_data(0x1D, 0x20, 0x67)
+bus.write_byte_data(0x1E, 0x20, 0x67)
 
 time.sleep(0.5)
 
-# LSM330 Accl address, 0x1D(29)
+# LSM330 Accl address, 0x1E(30)
 # Read data back from 0x28(40), 2 bytes
 # X-Axis Accl LSB, X-Axis Accl MSB
-data0 = bus.read_byte_data(0x1D, 0x28)
-data1 = bus.read_byte_data(0x1D, 0x29)
+data0 = bus.read_byte_data(0x1E, 0x28)
+data1 = bus.read_byte_data(0x1E, 0x29)
 
 # Convert the data
 xAccl = data1 * 256 + data0
 if xAccl > 32767 :
 	xAccl -= 65536
 
-# LSM330 Accl address, 0x1D(29)
+# LSM330 Accl address, 0x1E(30)
 # Read data back from 0x2A(42), 2 bytes
 # Y-Axis Accl LSB, Y-Axis Accl MSB
-data0 = bus.read_byte_data(0x1D, 0x2A)
-data1 = bus.read_byte_data(0x1D, 0x2B)
+data0 = bus.read_byte_data(0x1E, 0x2A)
+data1 = bus.read_byte_data(0x1E, 0x2B)
 
 # Convert the data
 yAccl = data1 * 256 + data0
 if yAccl > 32767 :
 	yAccl -= 65536
 
-# LSM330 Accl address, 0x1D(29)
+# LSM330 Accl address, 0x1E(30)
 # Read data back from 0x2C(44), 2 bytes
 # Z-Axis Accl LSB, Z-Axis Accl MSB
-data0 = bus.read_byte_data(0x1D, 0x2C)
-data1 = bus.read_byte_data(0x1D, 0x2D)
+data0 = bus.read_byte_data(0x1E, 0x2C)
+data1 = bus.read_byte_data(0x1E, 0x2D)
 
 # Convert the data
 zAccl = data1 * 256 + data0
@@ -93,9 +93,9 @@ if zAccl > 32767 :
 	zAccl -= 65536
 
 # Output data to screen
-print "X-Axis of Rotation : %d" %xGyro
-print "Y-Axis of Rotation : %d" %yGyro
-print "Z-Axis of Rotation : %d" %zGyro
-print "Acceleration in X-Axis : %d" %xAccl
-print "Acceleration in Y-Axis : %d" %yAccl
-print "Acceleration in Z-Axis : %d" %zAccl
+print("X-Axis of Rotation : %d" %xGyro)
+print("Y-Axis of Rotation : %d" %yGyro)
+print("Z-Axis of Rotation : %d" %zGyro)
+print("Acceleration in X-Axis : %d" %xAccl)
+print("Acceleration in Y-Axis : %d" %yAccl)
+print("Acceleration in Z-Axis : %d" %zAccl)
